@@ -27,11 +27,12 @@
     $:$page, $keyword, get_question_list()
 </script>
 
+
 <div class="container my-3">
     <div class="row my-3">
         <div class="col-6">
             <a use:link href="/question_create"
-                class="btn btn-primary {$login_status ? '' : 'disabled'}">질문 등록하기</a>
+                class="btn btn-primary {$login_status ? '' : 'disabled'}">질문 등록하기(test)</a>
         </div>
         <div class="col-6">
             <div class="input-group">
@@ -86,4 +87,5 @@
             <button class="page-link" on:click="{() => $page++}">다음</button>
         </li>
     </ul>
+    <!-- 페이징 처리 끝 -->
 </div>
