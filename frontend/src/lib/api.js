@@ -10,7 +10,7 @@ const fastapi = (operation, url, params, success_callback, failure_callback) => 
 	
     console.log("fastapi called...")
 	
-    if(operation == 'login') {
+    if(operation === 'login') {
         method = 'post'
         content_type = 'application/x-www-form-urlencoded'
         body = qs.stringify(params)

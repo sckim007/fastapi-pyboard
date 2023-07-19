@@ -31,11 +31,11 @@
         fastapi('post', url, params,
             (json) => {
                 content = ''
-                get_question()
                 error = {detail:[]}
+                get_question()
             },
-            (err_json) => {
-                error = err_json
+            (json_error) => {
+                error = json_error
             }
         )
     }
@@ -50,8 +50,8 @@
                 (json) => {
                     push("/")
                 },
-                (err_json) => {
-                    error = err_json
+                (json_error) => {
+                    error = json_error
                 }
             )
         }
@@ -59,7 +59,7 @@
 	
     function delete_answer(_answer_id) {
         if(window.confirm("정말로 삭제하시겠습니까?")) {
-            let url = "/api/answer/delete/"
+            let url = "/api/answer/delete"
             let params = {
                 answer_id: _answer_id
             }
@@ -68,7 +68,7 @@
                     get_question()
                 },
                 (json_error) => {
-                    error = err_json
+                    error = json_error
                 }
             )
         }
@@ -124,7 +124,7 @@
                 </div>
                 {/if}
                 <div class="badge bg-light text-dark p-2 text-start">
-                    <div class="mb2">{question.user ? question.user.username : ""}</div>
+                    <div class="mb-2">{question.user ? question.user.username : ""}</div>
                     <div>{moment(question.create_date).format("YYYY년 MM월 DD일 hh:mm a")}</div>
                 </div>
             </div>
@@ -133,7 +133,7 @@
                     on:click="{vote_question(question.id)}">추천
                     <span class="badge rounded-pill bg-success">{ question.voter.length }</span>
                 </button>			
-                {#if question.user && $username == question.user.username}
+                {#if question.user && $username === question.user.username}
                 <a use:link href="/question-modify/{question.id}"
                     class="btn btn-sm btn-outline-secondary">수정</a>
                 <button class="btn btn-sm btn-outline-secondary"

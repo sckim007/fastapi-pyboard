@@ -40,11 +40,11 @@
         </div>
         <div class="mb-3">
             <label for="password1">비밀번호</label>
-            <input type="text" class="form-control" id="password1" bind:value="{password1}">
+            <input type="password" class="form-control" id="password1" bind:value="{password1}">
         </div>
         <div class="mb-3">
             <label for="password2">비밀번호 확인</label>
-            <input type="text" class="form-control" id="password2" bind:value="{password2}">
+            <input type="password" class="form-control" id="password2" bind:value="{password2}">
         </div>
         <div class="mb-3">
             <label for="email">이메일</label>

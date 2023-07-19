@@ -1,6 +1,6 @@
 <script>
     import { link } from 'svelte-spa-router'
-	import { page, keyword, access_token, username, login_status } from "../lib/store"
+    import { page, keyword, access_token, username, login_status } from "../lib/store"
 </script>
 
 <!-- 네비게이션바 -->

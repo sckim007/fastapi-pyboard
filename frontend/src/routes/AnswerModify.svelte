@@ -35,11 +35,11 @@
     }
 </script>
 
-<div class="conatiner">
+<div class="container">
     <h5 class="my-3 border-bottom pb-2">답변 수정</h5>
     <Error error={error} />
     <form method="post" class="my-3">
-        <div class="my-3">
+        <div class="mb-3">
             <label for="content">내용</label>
             <textarea class="form-control" rows="10" bind:value="{content}"></textarea>
         </div>
